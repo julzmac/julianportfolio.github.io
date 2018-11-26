@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Julian's Portfolio</title>
+    <link href="Styles/StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Constantia;
+            font-size: xx-large;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .auto-style2 {
+            font-family: Constantia;
+        }
+
+        .auto-style3 {
+            color: #FFFFFF;
+        }
+
+        .auto-style4 {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" background-color="0000FF" runat="server">
+        <div>
+            <table align="center" style="width: 840px; background-color: #000000">
+                <tr style="height: 100px">
+
+
+
+                    <%-- Social Links aka twitter facebook linked --%>
+                    <td class="auto-style1" style="width: 900px; text-align: right">Julian McAdoo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <asp:HyperLink ID="HyperLink2" runat="server" ImageUrl="~/Pictures/download.jpg" NavigateUrl="https://www.linkedin.com/in/julian-mcadoo-78688166" ImageHeight="43px" ImageWidth="45px" Target="_blank">HyperLink</asp:HyperLink>
+                        &nbsp;
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://www.facebook.com/julzmac7" ImageUrl="~/Pictures/download.png" ImageHeight="45px" ImageWidth="45px" Target="_blank">HyperLink</asp:HyperLink>
+                        &nbsp;
+                        <asp:HyperLink ID="HyperLink3" runat="server" ImageHeight="45px" ImageUrl="~/Pictures/download (3).png" ImageWidth="45px" NavigateUrl="https://twitter.com/ijustdontseeit" Target="_blank">HyperLink</asp:HyperLink>
+
+                        <%--<a href="http://www.linkedin.com/in/julian-mcadoo-78688166">  <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" ImageUrl="~/Pictures/download.jpg" Width="45px" /></a> &nbsp;
+                        <asp:ImageButton ID="ImageButton2" runat="server" Width="45px" ImageUrl="~/Pictures/download (2).png" CssClass="auto-style4" Height="40px" /> &nbsp;
+                        <asp:ImageButton ID="ImageButton3" runat="server" Width="45px" ImageUrl="~/Pictures/download.png" Height="40px" />--%>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                </tr>
+
+
+
+                <%-- Navigation --%>
+                <tr style="height: 40px;">
+                    <td>
+                        <ul id="menu">
+                            <li class="auto-style2"><a href="Default.aspx">Home</a></li>
+                            <li class="auto-style2"><a href="Resume.aspx">Resume</a></li>
+                            <li class="auto-style2"><a href="Projects.aspx">Projects</a></li>
+                            <li class="auto-style2"><a href="Contact.aspx">Contact</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 400px; vertical-align: top;">
+
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <p>
+            <%--<asp:Label ID="Label1" runat="server" ForeColor="Red" Font-Overline="True" style="text-align: right"></asp:Label>--%>
+        </p>
+
+    </form>
+</body>
+</html>
